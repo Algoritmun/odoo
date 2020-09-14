@@ -206,7 +206,7 @@ msgstr "Sus vínculos rastreados"
 #: model_terms:ir.ui.view,arch_db:website_links.graphs
 #, python-format
 msgid "cancel"
-msgstr "cancelar"
+msgstr "anular"
 
 #. module: website_links
 #. openerp-web

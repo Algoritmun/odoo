@@ -206,7 +206,7 @@ msgstr "Negrillas"
 #: code:addons/web_editor/static/src/xml/editor.xml:293
 #, python-format
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: web_editor
 #. openerp-web
@@ -1341,7 +1341,7 @@ msgstr "Xl"
 #: code:addons/web_editor/static/src/xml/editor.xml:289
 #, python-format
 msgid "You can cancel to return to the edition mode."
-msgstr "Usted puede cancelar para regresar al modo de edición."
+msgstr "Usted puede anular para regresar al modo de edición."
 
 #. module: web_editor
 #. openerp-web

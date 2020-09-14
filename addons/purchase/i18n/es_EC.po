@@ -336,7 +336,7 @@ msgid ""
 "Can not cancel a procurement related to a purchase order. Please cancel the "
 "purchase order first."
 msgstr ""
-"Usted no puede cancelar un abastecimiento relacionado con una orden de "
+"Usted no puede anular un abastecimiento relacionado con una orden de "
 "compra. Por favor cancele la orden de compra primero para proceder"
 
 #. module: purchase
@@ -349,12 +349,12 @@ msgstr "No es posible encontrar ninguna ruta de Compra"
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model_terms:ir.ui.view,arch_db:purchase.view_purchase_configuration
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: purchase
 #: selection:purchase.order,state:0 selection:purchase.report,state:0
 msgid "Cancelled"
-msgstr "Cancelado"
+msgstr "Anulado"
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:612
@@ -1568,7 +1568,7 @@ msgstr "Transferencia"
 msgid ""
 "Unable to cancel purchase order %s as some receptions have already been done."
 msgstr ""
-"No es permitido cancelar la orden de compra %s ya que posee recepciones que "
+"No es permitido anular la orden de compra %s ya que posee recepciones que "
 "se encuentran en estado realizado"
 
 #. module: purchase
@@ -1578,7 +1578,7 @@ msgid ""
 "Unable to cancel this purchase order. You must first cancel related vendor "
 "bills."
 msgstr ""
-"No es permitido cancelar esta orden de compra!. Usted primero debe cancelar "
+"No es permitido anular esta orden de compra!. Usted primero debe anular "
 "las facturas de proveedor relacionadas"
 
 #. module: purchase

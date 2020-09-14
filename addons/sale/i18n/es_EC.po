@@ -267,12 +267,12 @@ msgstr "Puede editar el envío"
 #: model_terms:ir.ui.view,arch_db:sale.view_order_form
 #: model_terms:ir.ui.view,arch_db:sale.view_sale_advance_payment_inv
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: sale
 #: selection:sale.order,state:0 selection:sale.report,state:0
 msgid "Cancelled"
-msgstr "Cancelado"
+msgstr "Anulado"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_crm_team_use_invoices

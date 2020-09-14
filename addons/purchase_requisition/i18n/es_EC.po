@@ -89,7 +89,7 @@ msgstr ""
 "competidoras de diferentes proveedores. En la convocatoria de la licitación, "
 "puede grabar la productos que necesitan comprar y generar la creación de la "
 "Orden de Compras. Una vez que las ofertas se han registrado, se puede "
-"revisar, compararlas, validar algunas y cancelar otras."
+"revisar, compararlas, validar algunas y anular otras."
 
 #. module: purchase_requisition
 #: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_account_analytic_id
@@ -142,22 +142,22 @@ msgstr "Convocatoria de licitación donde las ofertas están cerradas"
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.view_bid_line_qty
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_partner
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: purchase_requisition
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
 msgid "Cancel Call"
-msgstr "Cancelar licitación"
+msgstr "Anular licitación"
 
 #. module: purchase_requisition
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.purchase_order_line_tree_tender
 msgid "Cancel Choice"
-msgstr "Cancelar opción"
+msgstr "Anular opción"
 
 #. module: purchase_requisition
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
 msgid "Cancel Purchase Order"
-msgstr "Cancelar pedido de compra"
+msgstr "Anular pedido de compra"
 
 #. module: purchase_requisition
 #: selection:purchase.requisition,state:0
@@ -596,7 +596,7 @@ msgid ""
 "confirmation of a purchase order it does not cancel the remaining orders"
 msgstr ""
 "Seleccionar sólo una SdP (exclusivo): En la confirmación de un pedido de "
-"compra, cancelar los demás.\n"
+"compra, anular los demás.\n"
 "Seleccionar múltiples SdPs: Permite tener múltiples pedidos de compra "
 "confirmados. Al confirmar alguno, no cancela los demás."
 
@@ -703,7 +703,7 @@ msgid ""
 "You have already one %s purchase order for this partner, you must cancel "
 "this purchase order to create a new quotation."
 msgstr ""
-"Tiene ya un pedido de compra %s para esta empresa. Debe cancelar este pedido "
+"Tiene ya un pedido de compra %s para esta empresa. Debe anular este pedido "
 "de compra para crear un nuevo presupuesto."
 
 #. module: purchase_requisition

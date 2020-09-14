@@ -161,7 +161,7 @@ msgstr ""
 #. module: base_automation
 #: selection:base.automation.lead.test,state:0
 msgid "Cancelled"
-msgstr "Cancelado"
+msgstr "Anulado"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation_lead_test_customer

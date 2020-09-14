@@ -97,7 +97,7 @@ msgstr ""
 #. module: membership
 #: model_terms:ir.ui.view,arch_db:membership.view_membership_invoice_view
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: membership
 #: model:ir.model.fields,field_description:membership.field_res_partner_membership_cancel

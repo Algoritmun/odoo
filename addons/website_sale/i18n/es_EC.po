@@ -2072,7 +2072,7 @@ msgstr "La URL completa para acceder al documento a través del sitio web."
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.order_state_message
 msgid "The payment seems to have been canceled."
-msgstr "El pago parece haber sido cancelado."
+msgstr "El pago parece haber sido anulado."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.order_state_message

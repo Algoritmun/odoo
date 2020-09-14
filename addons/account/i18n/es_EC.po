@@ -2497,24 +2497,24 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_from_invoices
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_invoice_form
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: account
 #: selection:account.invoice.refund,filter_refund:0
 msgid "Cancel: create credit note and reconcile"
-msgstr ""
+msgstr "Anular: crear nota de crédito y reconciliar"
 
 #. module: account
 #: selection:account.invoice,state:0 selection:account.invoice.report,state:0
 #: selection:account.payment,state:0
 msgid "Cancelled"
-msgstr "Cancelado"
+msgstr "Anulado"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.portal_invoice_page
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "Cancelled Invoice"
-msgstr ""
+msgstr "Factura Anulada"
 
 #. module: account
 #: code:addons/account/wizard/account_invoice_refund.py:56
@@ -2524,18 +2524,21 @@ msgid ""
 "invoice should be unreconciled first, then only you can add credit note for "
 "this invoice."
 msgstr ""
+"No puede crear una nota de crédito para la factura que está ya reconciliada, "
+"debe romper la conciliación primero, luego podrá añadir la nota de crédito "
+"para esta factura."
 
 #. module: account
 #: code:addons/account/wizard/account_invoice_refund.py:54
 #, python-format
 msgid "Cannot create credit note for the draft/cancelled invoice."
-msgstr ""
+msgstr "No puede crear notas de crédito para facturas en borrador o anuladas."
 
 #. module: account
 #: code:addons/account/models/account_move.py:195
 #, python-format
 msgid "Cannot create moves for different companies."
-msgstr ""
+msgstr "No puede crear movimientos para diferentes companías."
 
 #. module: account
 #: code:addons/account/models/account_move.py:227
@@ -2784,6 +2787,8 @@ msgid ""
 "Check this box if you want to allow the cancellation the entries related to "
 "this journal or of the invoice related to this journal"
 msgstr ""
+"Marca esta casilla si deseas permitir la anulación de asientos relacionados a "
+"este diario o las facturas relacionadas a este diario"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_price_include

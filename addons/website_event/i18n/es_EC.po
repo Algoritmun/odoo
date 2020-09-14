@@ -134,7 +134,7 @@ msgstr "Asistentes #%s"
 #. module: website_event
 #: model_terms:ir.ui.view,arch_db:website_event.registration_attendee_details
 msgid "Cancel Registration"
-msgstr "Cancelar registro"
+msgstr "Anular registro"
 
 #. module: website_event
 #. openerp-web

@@ -34,7 +34,7 @@ msgstr "; no se encontró orden"
 #. module: payment_sips
 #: model_terms:payment.acquirer,cancel_msg:payment_sips.payment_acquirer_sips
 msgid "<span><i>Cancel,</i> Your payment has been cancelled.</span>"
-msgstr "<span><i>Cancelad,</i> Su pago ha sido cancelado.</span>"
+msgstr "<span><i>Cancelad,</i> Su pago ha sido anulado.</span>"
 
 #. module: payment_sips
 #: model_terms:payment.acquirer,done_msg:payment_sips.payment_acquirer_sips

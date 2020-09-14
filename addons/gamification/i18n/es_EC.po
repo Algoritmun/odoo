@@ -524,7 +524,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:gamification.view_badge_wizard_grant
 #: model_terms:ir.ui.view,arch_db:gamification.view_goal_wizard_update_current
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: gamification
 #: selection:gamification.goal,state:0

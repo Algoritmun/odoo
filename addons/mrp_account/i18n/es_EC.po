@@ -35,7 +35,7 @@ msgstr "Lista de material"
 #. module: product_extended
 #: model_terms:ir.ui.view,arch_db:product_extended.view_compute_price_wizard
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: product_extended
 #: model_terms:ir.ui.view,arch_db:product_extended.view_compute_price_wizard

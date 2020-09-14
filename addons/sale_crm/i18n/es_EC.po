@@ -70,7 +70,7 @@ msgstr "Miembro asociado"
 #. module: sale_crm
 #: model:ir.model.fields,field_description:sale_crm.field_res_users_membership_cancel
 msgid "Cancel Membership Date"
-msgstr "Cancelar fecha de asociación"
+msgstr "Anular fecha de asociación"
 
 #. module: sale_crm
 #: model:ir.model.fields,field_description:sale_crm.field_res_users_payment_method_count
@@ -95,7 +95,7 @@ msgstr "Fecha desde la que el socio está activo."
 #. module: sale_crm
 #: model:ir.model.fields,help:sale_crm.field_res_users_membership_cancel
 msgid "Date on which membership has been cancelled"
-msgstr "Fecha en la que el socio ha sido cancelado."
+msgstr "Fecha en la que el socio ha sido anulado."
 
 #. module: sale_crm
 #: model:ir.model.fields,help:sale_crm.field_res_users_membership_stop
@@ -148,7 +148,7 @@ msgid ""
 msgstr ""
 "Indica el estado de la afiliación.\n"
 "- No miembro: Una empresa que no ha solicitado ninguna afiliación.\n"
-"- Miembro cancelado: Un miembro que ha cancelado su afiliación.\n"
+"- Miembro anulado: Un miembro que ha anulado su afiliación.\n"
 "- Antiguo miembro: Un miembro cuya afiliación ha expirado.\n"
 "- Miembro en espera: Un miembro que ha solicitado la afiliación y cuya "
 "factura va a crearse.\n"
@@ -229,7 +229,7 @@ msgstr "Pedidos"
 #: model:ir.model.fields,field_description:sale_crm.field_res_users_date_partnership
 #, fuzzy
 msgid "Partnership Date"
-msgstr "Cancelar fecha de asociación"
+msgstr "Anular fecha de asociación"
 
 #. module: sale_crm
 #: model:ir.model.fields,field_description:sale_crm.field_res_users_payment_method_ids

@@ -327,7 +327,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_test_form
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: mass_mailing
 #. openerp-web

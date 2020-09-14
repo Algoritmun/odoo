@@ -80,7 +80,7 @@ msgstr "Por máaquina (gratuito)"
 #: code:addons/website_gengo/static/src/xml/website.gengo.xml:78
 #, python-format
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: website_gengo
 #. openerp-web

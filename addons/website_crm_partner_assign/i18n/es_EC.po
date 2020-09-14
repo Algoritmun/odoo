@@ -323,7 +323,7 @@ msgstr ""
 #~ msgstr "Informe de la empresa CRM"
 
 #~ msgid "Cancel"
-#~ msgstr "Cancelar"
+#~ msgstr "Anular"
 
 #~ msgid "Categorization"
 #~ msgstr "Categorización"

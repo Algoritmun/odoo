@@ -1512,7 +1512,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.view_website_form
 #, python-format
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_feature_grid

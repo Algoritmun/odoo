@@ -41,12 +41,12 @@ msgstr "Añadir a la agrupación"
 #: model_terms:ir.ui.view,arch_db:stock_picking_wave.picking_to_wave_form
 #: model_terms:ir.ui.view,arch_db:stock_picking_wave.view_picking_wave_form
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: stock_picking_wave
 #: model_terms:ir.ui.view,arch_db:stock_picking_wave.view_picking_wave_form
 msgid "Cancel picking"
-msgstr "Cancelar Movimiento de inventario"
+msgstr "Anular Movimiento de inventario"
 
 #. module: stock_picking_wave
 #: selection:stock.picking.wave,state:0

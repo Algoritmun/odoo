@@ -250,7 +250,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:sale_coupon.sale_coupon_apply_code_view_form
 #: model:ir.ui.view,arch_db:sale_coupon.sale_coupon_generate_view_form
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: sale_coupon
 #: model:ir.actions.act_window,help:sale_coupon.sale_coupon_program_action_coupon_program

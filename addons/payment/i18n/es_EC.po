@@ -312,7 +312,7 @@ msgstr ""
 #: code:addons/payment/static/src/js/payment_form.js:323
 #, python-format
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_cancel_msg

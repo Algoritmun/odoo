@@ -578,7 +578,7 @@ msgstr "Puede ser vendido"
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.view_product_price_list
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Anular"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_category_type
