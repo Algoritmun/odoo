@@ -2400,12 +2400,6 @@ msgid "Bills to Validate"
 msgstr "Facturas a Validar"
 
 #. module: account
-#: code:addons/account/models/account_journal_dashboard.py:0
-#, python-format
-msgid "Bills to pay"
-msgstr "Facturas por pagar"
-
-#. module: account
 #: selection:res.partner,invoice_warn:0
 msgid "Blocking Message"
 msgstr ""
