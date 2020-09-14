@@ -2392,7 +2392,18 @@ msgstr ""
 #: code:addons/account/models/account_journal_dashboard.py:186
 #, python-format
 msgid "Bills to pay"
-msgstr ""
+msgstr "Facturas por pagar"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
+msgid "Bills to Validate"
+msgstr "Facturas a Validar"
+
+#. module: account
+#: code:addons/account/models/account_journal_dashboard.py:0
+#, python-format
+msgid "Bills to pay"
+msgstr "Facturas por pagar"
 
 #. module: account
 #: selection:res.partner,invoice_warn:0
@@ -2503,6 +2514,11 @@ msgstr "Anular"
 #: selection:account.invoice.refund,filter_refund:0
 msgid "Cancel: create credit note and reconcile"
 msgstr "Anular: crear nota de crédito y reconciliar"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_move_form
+msgid "Cancel Entry"
+msgstr "Anular Asiento"
 
 #. module: account
 #: selection:account.invoice,state:0 selection:account.invoice.report,state:0
@@ -10342,7 +10358,7 @@ msgstr "Unidad de Medida"
 #: code:addons/account/report/account_aged_partner_balance.py:190
 #, python-format
 msgid "Unknown Partner"
-msgstr ""
+msgstr "Contacto Desconocido"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_planner
@@ -10361,7 +10377,7 @@ msgstr ""
 #. module: account
 #: model:ir.actions.act_window,name:account.act_account_journal_2_account_invoice_opened
 msgid "Unpaid Invoices"
-msgstr ""
+msgstr "Facturas por cobrar"
 
 #. module: account
 #: selection:account.move,state:0
@@ -11437,6 +11453,27 @@ msgid "transactions in"
 msgstr ""
 
 #. module: account
+#. openerp-web
+#: code:addons/account/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "unpaid invoices"
+msgstr "facturas por cobrar"
+
+#. module: account
+#. openerp-web
+#: code:addons/account/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "unreconciled entries"
+msgstr "apuntes sin conciliar"
+
+#. module: account
+#. openerp-web
+#: code:addons/account/static/src/xml/account_reconciliation.xml:0
+#, python-format
+msgid "vendor bills"
+msgstr "facturas de proveedor"
+
+#. module: account
 #: model:ir.model,name:account.model_wizard_multi_charts_accounts
 msgid "wizard.multi.charts.accounts"
 msgstr ""
@@ -11444,4 +11481,4 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_bank_statement_form
 msgid "→ Count"
-msgstr ""
+msgstr "→ Cuenta"
