@@ -989,10 +989,8 @@ class Field(MetaField('DummyField', (object,), {})):
             if self.recursive:
                 recs = record
             else:
-                recs = env.records_to_compute(self)
-                # compute the field on real records only (if 'record' is real)
-                # or new records only (if 'record' is new)
-                recs = recs.filtered(lambda rec: bool(rec.id) == bool(record.id))
+                ids = expand_ids(record.id, env.all.tocompute[self])
+                recs = record.browse(itertools.islice(ids, PREFETCH_MAX))
             try:
                 self.compute_value(recs)
             except (AccessError, MissingError):
@@ -1869,6 +1867,12 @@ class Binary(Field):
     @property
     def column_type(self):
         return None if self.attachment else ('bytea', 'bytea')
+
+    def _get_attrs(self, model, name):
+        attrs = super(Binary, self)._get_attrs(model, name)
+        if not attrs.get('store', True):
+            attrs['attachment'] = False
+        return attrs
 
     _description_attachment = property(attrgetter('attachment'))
 
@@ -3645,4 +3649,4 @@ def apply_required(model, field_name):
 
 # imported here to avoid dependency cycle issues
 from .exceptions import AccessError, MissingError, UserError
-from .models import check_pg_name, BaseModel, NewId, IdType
+from .models import check_pg_name, BaseModel, NewId, IdType, expand_ids, PREFETCH_MAX
