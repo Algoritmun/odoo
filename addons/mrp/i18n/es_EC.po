@@ -562,12 +562,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mrp.view_change_production_qty_wizard
 #: model_terms:ir.ui.view,arch_db:mrp.view_mrp_product_produce_wizard
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: mrp
 #: selection:mrp.production,state:0 selection:mrp.workorder,state:0
 msgid "Cancelled"
-msgstr "Anulado"
+msgstr "Cancelado"
 
 #. module: mrp
 #: code:addons/mrp/models/mrp_production.py:316

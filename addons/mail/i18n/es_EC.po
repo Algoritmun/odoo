@@ -846,7 +846,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mail.view_mail_form
 #, python-format
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_mail_tree
@@ -856,7 +856,7 @@ msgstr ""
 #. module: mail
 #: selection:mail.mail,state:0
 msgid "Cancelled"
-msgstr "Anulado"
+msgstr "Cancelado"
 
 #. module: mail
 #: selection:mail.shortcode,shortcode_type:0

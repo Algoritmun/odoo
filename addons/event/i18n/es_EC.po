@@ -678,7 +678,7 @@ msgstr ""
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_confirm
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: event
 #: model_terms:ir.ui.view,arch_db:event.view_event_form
@@ -694,7 +694,7 @@ msgstr ""
 #. module: event
 #: selection:event.event,state:0 selection:event.registration,state:0
 msgid "Cancelled"
-msgstr "Anulado"
+msgstr "Cancelado"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event_event_type_id

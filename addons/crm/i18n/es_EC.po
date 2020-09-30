@@ -997,7 +997,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner
 #: model_terms:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner_mass
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.crm_team_act_tree

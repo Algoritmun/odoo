@@ -490,7 +490,7 @@ msgstr "No puede enviar el email a una dirección inválida"
 #: code:addons/web/static/src/xml/base.xml:60
 #, python-format
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: web
 #. openerp-web

@@ -66,8 +66,8 @@ msgstr ""
 "* Listo para ser transferido: los productos están reservados, esperando "
 "simplemente a su confirmación.\n"
 "* Transferido: ha sido procesado, por lo que no puede ser modificado o "
-"anulado ya.\n"
-"* Anulado: ha sido anulado y no puede ser confirmado ya."
+"cancelado ya.\n"
+"* Cancelado: ha sido cancelado y no puede ser confirmado ya."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_config_settings_module_stock_dropshipping
@@ -1086,7 +1086,7 @@ msgstr "Pedidos en espera"
 #: code:addons/stock/wizard/stock_backorder_confirmation.py:33
 #, python-format
 msgid "Back order <em>%s</em> <b>cancelled</b>."
-msgstr "Se ha anulado la siguiente entrega pendiente <em>%s</em>."
+msgstr "Se ha cancelado la siguiente entrega pendiente <em>%s</em>."
 
 #. module: stock
 #: code:addons/stock/stock.py:1127
@@ -1250,18 +1250,18 @@ msgstr "No se puede encontrar una ruta genérica para Bajo pedido"
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_move_scrap_wizard
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_return_picking_form
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_inventory_form
 msgid "Cancel Inventory"
-msgstr "Anular el inventario"
+msgstr "Cancelar el inventario"
 
 #. module: stock
 #: selection:stock.inventory,state:0 selection:stock.move,state:0
 #: selection:stock.pack.operation,state:0 selection:stock.picking,state:0
 msgid "Cancelled"
-msgstr "Anulado"
+msgstr "Cancelado"
 
 #. module: stock
 #: code:addons/stock/stock.py:2048
@@ -2702,7 +2702,7 @@ msgid ""
 "If checked, when the previous move is cancelled or split, the move generated "
 "by this move will too"
 msgstr ""
-"Si está marcado, cuando el movimiento previo sea anulado o dividido, el "
+"Si está marcado, cuando el movimiento previo sea cancelado o dividido, el "
 "movimiento generado por éste también lo será"
 
 #. module: stock
@@ -2713,7 +2713,7 @@ msgid ""
 "will too"
 msgstr ""
 "Si está marcado, cuando el movimiento previo a éste (que fue generado por un "
-"abastecimiento siguiente) sea anulado o dividido, el movimiento generado "
+"abastecimiento siguiente) sea cancelado o dividido, el movimiento generado "
 "por éste también lo será"
 
 #. module: stock
@@ -7447,7 +7447,7 @@ msgstr "Puede revisar y editar las unidades predefinidas a través de la"
 #, python-format
 msgid "You cannot cancel a stock move that has been set to 'Done'."
 msgstr ""
-"No puede anular un movimiento de existencias que está como 'Realizado'."
+"No puede cancelar un movimiento de existencias que está como 'Realizado'."
 
 #. module: stock
 #: code:addons/stock/stock.py:3196

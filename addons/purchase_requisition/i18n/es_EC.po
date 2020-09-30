@@ -162,7 +162,7 @@ msgstr "Anular pedido de compra"
 #. module: purchase_requisition
 #: selection:purchase.requisition,state:0
 msgid "Cancelled"
-msgstr "Cancelada"
+msgstr "Anulada"
 
 #. module: purchase_requisition
 #: code:addons/purchase_requisition/purchase_requisition.py:302

@@ -71,7 +71,7 @@ msgstr "Por peso"
 #. module: stock_landed_costs
 #: model_terms:ir.ui.view,arch_db:stock_landed_costs.view_stock_landed_cost_form
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: stock_landed_costs
 #: selection:stock.landed.cost,state:0

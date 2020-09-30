@@ -340,7 +340,7 @@ msgstr "CRM"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_email_compose_message
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form

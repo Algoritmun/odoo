@@ -158,13 +158,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_order_line_view_tree
 #: model_terms:ir.ui.view,arch_db:lunch.view_lunch_order_line_lucky
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: lunch
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_order_line_view_search
 #: selection:lunch.order,state:0 selection:lunch.order.line,state:0
 msgid "Cancelled"
-msgstr "Anulado"
+msgstr "Cancelado"
 
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_lunch_order_line_cashmove
