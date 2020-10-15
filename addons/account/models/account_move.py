@@ -76,7 +76,7 @@ class AccountMove(models.Model):
 
     @api.model
     def _get_default_invoice_date(self):
-        return fields.Date.today() if self._context.get('default_type', 'entry') in ('in_invoice', 'in_refund', 'in_receipt') else False
+        return fields.Date.context_today(self) if self._context.get('default_type', 'entry') in self.get_purchase_types(include_receipts=True) else False
 
     @api.model
     def _get_default_currency(self):
@@ -504,7 +504,7 @@ class AccountMove(models.Model):
                 quantity = base_line.quantity
                 if base_line.currency_id:
                     price_unit_foreign_curr = sign * base_line.price_unit * (1 - (base_line.discount / 100.0))
-                    price_unit_comp_curr = base_line.currency_id._convert(price_unit_foreign_curr, move.company_id.currency_id, move.company_id, move.date)
+                    price_unit_comp_curr = base_line.currency_id._convert(price_unit_foreign_curr, move.company_id.currency_id, move.company_id, move.date, round=False)
                 else:
                     price_unit_foreign_curr = 0.0
                     price_unit_comp_curr = sign * base_line.price_unit * (1 - (base_line.discount / 100.0))
@@ -863,7 +863,7 @@ class AccountMove(models.Model):
             :return:                        A list <to_pay_company_currency, to_pay_invoice_currency, due_date>.
             '''
             if self.invoice_payment_term_id:
-                to_compute = self.invoice_payment_term_id.compute(total_balance, date_ref=date, currency=self.currency_id)
+                to_compute = self.invoice_payment_term_id.compute(total_balance, date_ref=date, currency=self.company_id.currency_id)
                 if self.currency_id != self.company_id.currency_id:
                     # Multi-currencies.
                     to_compute_currency = self.invoice_payment_term_id.compute(total_amount_currency, date_ref=date, currency=self.currency_id)
@@ -925,7 +925,7 @@ class AccountMove(models.Model):
 
         existing_terms_lines = self.line_ids.filtered(lambda line: line.account_id.user_type_id.type in ('receivable', 'payable'))
         others_lines = self.line_ids.filtered(lambda line: line.account_id.user_type_id.type not in ('receivable', 'payable'))
-        company_currency_id = self.company_id.currency_id
+        company_currency_id = (self.company_id or self.env.company).currency_id
         total_balance = sum(others_lines.mapped(lambda l: company_currency_id.round(l.balance)))
         total_amount_currency = sum(others_lines.mapped('amount_currency'))
 
@@ -2283,6 +2283,10 @@ class AccountMove(models.Model):
     def action_post(self):
         if self.filtered(lambda x: x.journal_id.post_at == 'bank_rec').mapped('line_ids.payment_id').filtered(lambda x: x.state != 'reconciled'):
             raise UserError(_("A payment journal entry generated in a journal configured to post entries only when payments are reconciled with a bank statement cannot be manually posted. Those will be posted automatically after performing the bank reconciliation."))
+        if self.env.context.get('default_type'):
+            context = dict(self.env.context)
+            del context['default_type']
+            self = self.with_context(context)
         return self.post()
 
     def js_assign_outstanding_line(self, line_id):
@@ -2883,7 +2887,7 @@ class AccountMoveLine(models.Model):
                 'credit': price_subtotal < 0.0 and -price_subtotal or 0.0,
             }
 
-    def _get_fields_onchange_balance(self, quantity=None, discount=None, balance=None, move_type=None, currency=None, taxes=None, price_subtotal=None):
+    def _get_fields_onchange_balance(self, quantity=None, discount=None, balance=None, move_type=None, currency=None, taxes=None, price_subtotal=None, force_computation=False):
         self.ensure_one()
         return self._get_fields_onchange_balance_model(
             quantity=quantity or self.quantity,
@@ -2893,10 +2897,11 @@ class AccountMoveLine(models.Model):
             currency=currency or self.currency_id or self.move_id.currency_id,
             taxes=taxes or self.tax_ids,
             price_subtotal=price_subtotal or self.price_subtotal,
+            force_computation=force_computation,
         )
 
     @api.model
-    def _get_fields_onchange_balance_model(self, quantity, discount, balance, move_type, currency, taxes, price_subtotal):
+    def _get_fields_onchange_balance_model(self, quantity, discount, balance, move_type, currency, taxes, price_subtotal, force_computation=False):
         ''' This method is used to recompute the values of 'quantity', 'discount', 'price_unit' due to a change made
         in some accounting fields such as 'balance'.
 
@@ -2925,7 +2930,7 @@ class AccountMoveLine(models.Model):
         # However, when triggering the inverse, 2180.09 + (2180.09 * 0.055) = 2180.09 + 119.90 = 2299.99 is computed.
         # To avoid that, set the price_subtotal at the balance if the difference between them looks like a rounding
         # issue.
-        if currency.is_zero(balance - price_subtotal):
+        if not force_computation and currency.is_zero(balance - price_subtotal):
             return {}
 
         taxes = taxes.flatten_taxes_hierarchy()
@@ -3039,7 +3044,7 @@ class AccountMoveLine(models.Model):
             price_subtotal = self._get_price_total_and_subtotal(price_unit=price_unit, taxes=taxes)['price_subtotal']
             accounting_vals = self._get_fields_onchange_subtotal(price_subtotal=price_subtotal, currency=self.move_id.company_currency_id)
             balance = accounting_vals['debit'] - accounting_vals['credit']
-            price_unit = self._get_fields_onchange_balance(balance=balance).get('price_unit', price_unit)
+            price_unit = self._get_fields_onchange_balance(balance=balance, force_computation=True).get('price_unit', price_unit)
 
         # Convert the unit price to the invoice's currency.
         company = self.move_id.company_id
@@ -3657,7 +3662,7 @@ class AccountMoveLine(models.Model):
         caba_connected_amls = amls.filtered(lambda x: x.move_id.tax_cash_basis_rec_id) + caba_reconciled_amls
         matched_percentages = caba_connected_amls._get_matched_percentage()
         if (
-                all(matched_percentages[aml.move_id.id] >= 1.0 for aml in caba_connected_amls)
+                (all(amls.mapped('tax_exigible')) or all(matched_percentages[aml.move_id.id] >= 1.0 for aml in caba_connected_amls))
                 and
                 (
                     currency and float_is_zero(total_amount_currency, precision_rounding=currency.rounding) or
@@ -3947,7 +3952,22 @@ class AccountMoveLine(models.Model):
 
     def remove_move_reconcile(self):
         """ Undo a reconciliation """
-        (self.mapped('matched_debit_ids') + self.mapped('matched_credit_ids')).unlink()
+        # Payment partial reconcile
+        rec_partial_reconcile = self.mapped('matched_debit_ids') + self.mapped('matched_credit_ids')
+        if self.env.context.get('move_id'):
+            # If an invoice is specified, we will only remove the reconciliation between the payment
+            # and that specific invoice.
+            # Note that, if a write-off was created this one must be removed too.
+            current_invoice = self.env['account.move'].browse(self.env.context.get('move_id'))
+            # Current invoice partial reconcile
+            invoice_wo_partial_reconcile = current_invoice.line_ids.mapped('matched_debit_ids') + current_invoice.line_ids.mapped('matched_credit_ids')
+            writeoff = current_invoice.line_ids.mapped('full_reconcile_id.exchange_move_id')
+            if writeoff:
+                # Write-off partial reconcile
+                invoice_wo_partial_reconcile += writeoff.line_ids.mapped('matched_credit_ids')
+                invoice_wo_partial_reconcile += writeoff.line_ids.mapped('matched_debit_ids')
+            rec_partial_reconcile = rec_partial_reconcile & invoice_wo_partial_reconcile
+        rec_partial_reconcile.unlink()
 
     def _copy_data_extend_business_fields(self, values):
         ''' Hook allowing copying business fields under certain conditions.
@@ -4219,6 +4239,7 @@ class AccountMoveLine(models.Model):
 class AccountPartialReconcile(models.Model):
     _name = "account.partial.reconcile"
     _description = "Partial Reconcile"
+    _rec_name = "id"
 
     debit_move_id = fields.Many2one('account.move.line', index=True, required=True)
     credit_move_id = fields.Many2one('account.move.line', index=True, required=True)
@@ -4468,6 +4489,7 @@ class AccountPartialReconcile(models.Model):
                               'for this company: "%s" \nConfigure it in Accounting/Configuration/Settings') %
                             (self.company_id.name))
         move_vals = {
+            'type': 'entry',
             'journal_id': self.company_id.tax_cash_basis_journal_id.id,
             'tax_cash_basis_rec_id': self.id,
             'ref': self.credit_move_id.move_id.name if self.credit_move_id.payment_id else self.debit_move_id.move_id.name,
