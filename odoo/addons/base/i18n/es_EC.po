@@ -478,6 +478,23 @@ msgid ""
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,summary:base.module_l10n_mx_reports
+msgid ""
+"\n"
+"        Electronic accounting reports\n"
+"            - COA\n"
+"            - Trial Balance\n"
+"        DIOT Report\n"
+"    "
+msgstr ""
+"\n"
+"       Informes contables electrónicos\n"
+"             - COA\n"
+"             - Balance de comprobación\n"
+"       Informe DIOT\n"
+"    "
+
+#. module: base
 #: model:ir.module.module,description:base.module_account_sepa
 msgid ""
 "\n"
