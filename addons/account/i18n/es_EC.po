@@ -3255,7 +3255,7 @@ msgstr ""
 #. module: account
 #: model:account.account.type,name:account.data_account_type_direct_costs
 msgid "Cost of Revenue"
-msgstr ""
+msgstr "Costo de Ventas"
 
 #. module: account
 #: code:addons/account/models/chart_template.py:862
@@ -6490,7 +6490,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_form
 msgid "Minus Cost of Revenue"
-msgstr ""
+msgstr "Menos Costo de Ventas"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_form
