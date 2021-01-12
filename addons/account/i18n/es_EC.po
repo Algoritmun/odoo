@@ -2507,7 +2507,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_from_invoices
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_invoice_form
 msgid "Cancel"
-msgstr "Anular"
+msgstr "Cancelar"
 
 #. module: account
 #: selection:account.invoice.refund,filter_refund:0
