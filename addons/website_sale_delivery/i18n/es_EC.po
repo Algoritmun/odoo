@@ -300,7 +300,7 @@ msgstr ""
 #. module: website_sale_delivery
 #: model:ir.model.fields,field_description:website_sale_delivery.field_delivery_carrier_public_categ_ids
 msgid "Website Product Category"
-msgstr "Categoría del Producto"
+msgstr "Categoría del Sitio Web"
 
 #. module: website_sale_delivery
 #: model:ir.model.fields,field_description:website_sale_delivery.field_delivery_carrier_website_meta_description

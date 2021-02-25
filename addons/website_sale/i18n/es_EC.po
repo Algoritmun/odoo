@@ -2251,7 +2251,7 @@ msgstr "Categorías de Productos"
 #: model:ir.model.fields,field_description:website_sale.field_product_product_public_categ_ids
 #: model:ir.model.fields,field_description:website_sale.field_product_template_public_categ_ids
 msgid "Website Product Category"
-msgstr "Categoría del Producto"
+msgstr "Categoría del Sitio Web"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_public_category_form_view
