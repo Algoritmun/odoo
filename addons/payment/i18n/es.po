@@ -1463,7 +1463,7 @@ msgstr "Pagos fallidos"
 #: code:addons/payment/static/src/xml/payment_processing.xml:0
 #, python-format
 msgid "Payments received"
-msgstr "pagos recibidos"
+msgstr "Pagos recibidos"
 
 #. module: payment
 #: model:payment.acquirer,name:payment.payment_acquirer_paypal

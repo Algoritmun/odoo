@@ -326,6 +326,13 @@ msgstr ""
 
 #. module: payment
 #. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+#, python-format
+msgid "Cancelled payments"
+msgstr "Pagos rechazados"
+
+#. module: payment
+#. openerp-web
 #: code:addons/payment/static/src/js/payment_form.js:168
 #, python-format
 msgid "Cannot set-up the payment"
@@ -961,6 +968,13 @@ msgid ""
 msgstr ""
 
 #. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+#, python-format
+msgid "Payments received"
+msgstr "Pagos pendientes"
+
+#. module: payment
 #: model:payment.acquirer,name:payment.payment_acquirer_paypal
 #: selection:payment.acquirer,provider:0
 msgid "Paypal"
@@ -1224,6 +1238,13 @@ msgid ""
 "This template renders the acquirer button with all necessary values.\n"
 "                                            It is rendered with qWeb with the following evaluation context:"
 msgstr ""
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+#, python-format
+msgid "This transaction has been cancelled."
+msgstr "Esta transacción ha sido rechazada."
 
 #. module: payment
 #: model_terms:payment.acquirer,pre_msg:payment.payment_acquirer_transfer
