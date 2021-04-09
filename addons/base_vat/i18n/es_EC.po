@@ -42,6 +42,8 @@ msgid ""
 "The VAT number [%s] for partner [%s] does not seem to be valid. \n"
 "Note: the expected format is %s"
 msgstr ""
+"El número de identificación fiscal (CC/RUC) [%s] del contacto [%s] no parece ser válido.\n"
+"Nota: el formato esperado es %s"
 
 #. module: base_vat
 #: code:addons/base_vat/models/res_partner.py:133
