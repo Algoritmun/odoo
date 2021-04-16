@@ -115,12 +115,15 @@ def _build_url_w_params(url_string, query_params, remove_duplicates=True):
 
 
 class CustomerPortal(Controller):
-
-    MANDATORY_BILLING_FIELDS = ["name", "phone", "email", "street", "city", "country_id"]
-    OPTIONAL_BILLING_FIELDS = ["zipcode", "state_id", "vat", "company_name"]
-
+    
     _items_per_page = 20
 
+    def _get_mandatory_billing_fields(self):
+        return ["name", "phone", "email", "street", "city", "country_id"]
+        
+    def _get_optional_billing_fields(self):
+        return ["zipcode", "state_id", "vat", "company_name"]
+    
     def _get_archive_groups(self, model, domain=None, fields=None, groupby="create_date", order="create_date desc"):
         if not model:
             return []
@@ -183,8 +186,8 @@ class CustomerPortal(Controller):
             values.update({'error': error, 'error_message': error_message})
             values.update(post)
             if not error:
-                values = {key: post[key] for key in self.MANDATORY_BILLING_FIELDS}
-                values.update({key: post[key] for key in self.OPTIONAL_BILLING_FIELDS if key in post})
+                values = {key: post[key] for key in self._get_mandatory_billing_fields()}
+                values.update({key: post[key] for key in self._get_optional_billing_fields() if key in post})
                 for field in set(['country_id', 'state_id']) & set(values.keys()):
                     try:
                         values[field] = int(values[field])
@@ -296,7 +299,7 @@ class CustomerPortal(Controller):
         error_message = []
 
         # Validation
-        for field_name in self.MANDATORY_BILLING_FIELDS:
+        for field_name in self._get_mandatory_billing_fields():
             if not data.get(field_name):
                 error[field_name] = 'missing'
 
@@ -328,7 +331,7 @@ class CustomerPortal(Controller):
         if [err for err in error.values() if err == 'missing']:
             error_message.append(_('Some required fields are empty.'))
 
-        unknown = [k for k in data if k not in self.MANDATORY_BILLING_FIELDS + self.OPTIONAL_BILLING_FIELDS]
+        unknown = [k for k in data if k not in self._get_mandatory_billing_fields() + self._get_optional_billing_fields()]
         if unknown:
             error['common'] = 'Unknown field'
             error_message.append("Unknown field '%s'" % ','.join(unknown))
