@@ -6,11 +6,11 @@
 # Grega Vavtar <grega@hbs.si>, 2020
 # Vida Potočnik <vida.potocnik@mentis.si>, 2020
 # Dejan Sraka <dejan.sraka@picolabs.si>, 2020
-# Tadej Lupšina <tadej@hbs.si>, 2020
 # Martin Trigaux, 2020
 # Matjaz Mozetic <m.mozetic@matmoz.si>, 2020
 # matjaz k <matjaz@mentis.si>, 2020
 # Boris Kodelja <boris@hbs.si>, 2020
+# Tadej Lupšina <tadej@hbs.si>, 2021
 # Jasmina Macur <jasmina@hbs.si>, 2021
 # 
 msgid ""
@@ -603,7 +603,7 @@ msgstr "Ali ste prepričani, da želite arhivirati vse izbrane zapise?"
 #: code:addons/web/static/src/js/views/form/form_controller.js:0
 #, python-format
 msgid "Are you sure that you want to archive this record?"
-msgstr ""
+msgstr "Ali ste prepričani, da želite arhivirati izbrani zapis?"
 
 #. module: web
 #. openerp-web
@@ -3465,7 +3465,7 @@ msgstr ""
 #: code:addons/web/static/src/js/services/crash_manager.js:0
 #, python-format
 msgid "Something went wrong !"
-msgstr ""
+msgstr "Nekaj je šlo narobe !"
 
 #. module: web
 #. openerp-web
@@ -3536,7 +3536,7 @@ msgstr "Podpora"
 #: code:addons/web/static/src/xml/base.xml:0
 #, python-format
 msgid "Switch to this company"
-msgstr ""
+msgstr "Preklopi na to podjetje"
 
 #. module: web
 #. openerp-web
@@ -4454,7 +4454,7 @@ msgstr "je"
 #: code:addons/web/static/src/js/views/control_panel/search/search_filters.js:0
 #, python-format
 msgid "is after"
-msgstr ""
+msgstr "je po"
 
 #. module: web
 #. openerp-web
@@ -4462,7 +4462,7 @@ msgstr ""
 #: code:addons/web/static/src/js/views/control_panel/search/search_filters.js:0
 #, python-format
 msgid "is after or equal to"
-msgstr ""
+msgstr "je po ali enako"
 
 #. module: web
 #. openerp-web
@@ -4470,7 +4470,7 @@ msgstr ""
 #: code:addons/web/static/src/js/views/control_panel/search/search_filters.js:0
 #, python-format
 msgid "is before"
-msgstr ""
+msgstr "je pred"
 
 #. module: web
 #. openerp-web
@@ -4478,7 +4478,7 @@ msgstr ""
 #: code:addons/web/static/src/js/views/control_panel/search/search_filters.js:0
 #, python-format
 msgid "is before or equal to"
-msgstr ""
+msgstr "je pred ali enako"
 
 #. module: web
 #. openerp-web
@@ -4486,7 +4486,7 @@ msgstr ""
 #: code:addons/web/static/src/js/views/control_panel/search/search_filters.js:0
 #, python-format
 msgid "is between"
-msgstr ""
+msgstr "je med"
 
 #. module: web
 #. openerp-web
