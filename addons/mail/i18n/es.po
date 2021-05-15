@@ -57,7 +57,7 @@ msgstr "El canal es privado. Hay que tener una invitación para unirse."
 #: code:addons/mail/wizard/invite.py:0
 #, python-format
 msgid "%(user_name)s invited you to follow %(document)s document: %(title)s"
-msgstr "%(user_name)s le invitó a seguir %(document)s el documento: %(title)s"
+msgstr "%(user_name)s le invitó a seguir el documento de %(document)s: %(title)s"
 
 #. module: mail
 #: code:addons/mail/wizard/invite.py:0
